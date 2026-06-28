@@ -1,3 +1,16 @@
 body {
     background-color: green;
+    color: white;
+    font-family: "Roboto Slab", serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    margin: 0;
+}
+
+button {
+    background-color: aquamarine;
+    color: greenyellow;
+    stroke: black;
 }

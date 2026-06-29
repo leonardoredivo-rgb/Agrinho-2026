@@ -1,7 +1,7 @@
 
-const botao = document.getElementById('botao-enviar');
-const campoNome = document.getElementById('nome');
-const textoMensagem = document.getElementById('mensagem');
+var botao = document.getElementById('botao-enviar');
+var campoNome = document.getElementById('nome');
+var textoMensagem = document.getElementById('mensagem');
 
 botao.addEventListener('click', function(evento) {
     evento.preventDefault(); // Impede a página de subir quando clica no '#'

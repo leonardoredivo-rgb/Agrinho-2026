@@ -10,5 +10,7 @@ body {
 }
 
 button {
-    background-color: forestgreen;
+    background-color: rgb(24, 124, 24);
+    color: rgb(48, 48, 48);
+    font-family: "Roboto Slab", serif;
 }

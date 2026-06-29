@@ -14,4 +14,4 @@ botao.addEventListener('click', function(evento) {
     } else {
         alert("Por favor, digite seu nome primeiro!");
     }
-});
+};

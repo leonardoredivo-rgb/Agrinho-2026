@@ -1,5 +1,5 @@
-<body>
-    const botao = document.getElementById('botao-enviar');
+
+const botao = document.getElementById('botao-enviar');
 const campoNome = document.getElementById('nome');
 const textoMensagem = document.getElementById('mensagem');
 
@@ -15,4 +15,3 @@ botao.addEventListener('click', function(evento) {
         alert("Por favor, digite seu nome primeiro!");
     }
 });
-</body>

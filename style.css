@@ -1,16 +1,125 @@
-body {
-    background-color: green;
-    color: white;
-    font-family: "Roboto Slab", serif;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    height: 700px;
-    margin: 0;
+/* Variáveis CSS */
+:root {
+    --bg-primary: #f4f7f5;
+    --bg-card: #ffffff;
+    --text-main: #2e3d30;
+    --accent-color: #2a7a43; /* Verde Agrinho */
+    --accent-hover: #1e5a30;
+    --border-color: #d2ded5;
+    --font-base-size: 12pt;
+    --transition-smooth: all 0.3s ease;
 }
 
-button {
-    background-color: rgb(103, 253, 165);
-    color: rgb(2, 54, 10);
-    font-family: "Roboto Slab", serif;
+/* Modo Escuro */
+[data-theme="dark"] {
+    --bg-primary: #121814;
+    --bg-card: #1b241e;
+    --text-main: #e1eae3;
+    --border-color: #2d3d32;
 }
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    font-size: var(--font-base-size);
+    transition: var(--transition-smooth);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Layout Flexbox simples exigido na rubrica */
+.header-container, .layout-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main-header {
+    background-color: var(--bg-card);
+    border-bottom: 3px solid var(--accent-color);
+    padding: 15px;
+}
+
+.year-accent { color: var(--accent-color); font-weight: bold; }
+.subtitle { margin: 0; color: #556b58; }
+
+.accessibility-controls { display: flex; gap: 10px; }
+.control-btn { cursor: pointer; padding: 5px 10px; background: var(--bg-primary); border: 1px solid var(--border-color); color: var(--text-main); }
+
+/* Cards e Botões */
+.card, .quiz-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--bg-primary);
+    color: var(--text-main);
+}
+
+/* O Botão Verde de "Começar" */
+.start-btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 13pt;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: var(--transition-smooth);
+}
+
+.start-btn:hover {
+    background-color: var(--accent-hover);
+}
+
+.quiz-options { display: flex; flex-direction: column; gap: 10px; }
+.quiz-opt-btn {
+    padding: 10px;
+    text-align: left;
+    background: var(--bg-primary);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: var(--transition-smooth);
+}
+
+.quiz-opt-btn:hover { border-color: var(--accent-color); }
+
+.score-container {
+    font-size: 14pt;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+/* Tags Extras Formatadas */
+blockquote { border-left: 4px solid var(--accent-color); margin: 20px 0; padding-left: 15px; font-style: italic; }
+pre { background: var(--bg-card); padding: 10px; border: 1px solid var(--border-color); overflow-x: auto; }
+code { color: var(--accent-color); font-family: monospace; }
+.description-list dt { font-weight: bold; color: var(--accent-color); }
+
+.main-footer { text-align: center; margin-top: 40px; font-size: 10pt; }
+.hidden { display: none !important; }

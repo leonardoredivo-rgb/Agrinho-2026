@@ -1,28 +1,108 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <h1>AGRINHO 2026</h1>
-        <metacharset=utf-8/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <main>
-            <div class="passo ativo" id="passo-0">
-                <p>Clima do Paraná</p>
-                <button class="btn-proximo" data-proximo="1">Norte</button>
-                <button class="btn-proximo" data-proximo="2">Sul</button>
-            </div>
-            <div class="passo" id="passo-1">
-                <p>Agora, escolha a região que você quer explorar:</p>
-                <button class="btn-proximo" data-proximo="3">Leste</button>
-                <button class="btn-proximo" data-proximo="4">Oeste</button>
-            </div>
-        </main>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho 2026 - Quiz Sustentável</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+    <header class="main-header">
+        <div class="header-container">
+            <h1>Agrinho <span class="year-accent">2026</span></h1>
+            <p class="subtitle">Tecnologia e Consciência no Campo</p>
+            
+            <div class="accessibility-controls">
+                <button id="toggle-theme-btn" class="control-btn">🌓 Alternar Tema</button>
+                <button id="font-decrease-btn" class="control-btn">A-</button>
+                <button id="font-increase-btn" class="control-btn">A+</button>
+            </div>
+        </div>
+    </header>
 
+    <section class="welcome-section">
+        <div class="container">
+            <div class="card">
+                <h2 id="greeting-text">Seja bem-vindo ao Quiz do Agrinho!</h2>
+                
+                <div id="name-form" class="form-group">
+                    <label for="username-input">Digite seu nome para iniciar:</label>
+                    <input type="text" id="username-input" placeholder="Seu nome aqui...">
+                </div>
+                
+                <div id="start-button-area" class="hidden">
+                    <button id="start-quiz-btn" class="start-btn">Começar Quiz 🌾</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="quiz-section" class="main-content hidden">
+        <div class="container layout-grid">
+            
+            <article class="content-article">
+                <h2>Quiz da Agricultura do Futuro</h2>
+                <p>Responda às questões abaixo para acumular sua pontuação ecológica!</p>
+                
+                <div class="score-container">
+                    <span>Pontos: </span>
+                    <strong id="score-counter">0</strong>
+                </div>
+
+                <div class="quiz-card">
+                    <h3>1. Qual tecnologia ajuda a economizar água no campo?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-opt-btn q1" data-correct="false">A) Irrigação por inundação</button>
+                        <button class="quiz-opt-btn q1" data-correct="true">B) Gotejamento com sensores de umidade</button>
+                    </div>
+                </div>
+
+                <div class="quiz-card">
+                    <h3>2. Como os drones auxiliam na sustentabilidade?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-opt-btn q2" data-correct="true">A) Aplicando insumos apenas onde é necessário</button>
+                        <button class="quiz-opt-btn q2" data-correct="false">B) Substituindo completamente o trabalho humano</button>
+                    </div>
+                </div>
+
+                <div class="quiz-card">
+                    <h3>3. Para que serve a rotação de culturas?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-opt-btn q3" data-correct="false">A) Deixar o solo exposto ao sol</button>
+                        <button class="quiz-opt-btn q3" data-correct="true">B) Manter os nutrientes da terra naturalmente</button>
+                    </div>
+                </div>
+                
+                <blockquote>
+                    "Preservar a terra é garantir o nosso amanhã."
+                    <cite>— Concurso Agrinho</cite>
+                </blockquote>
+
+                <dl class="description-list">
+                    <dt><dfn>Sustentabilidade</dfn></dt>
+                    <dd>Produzir sem esgotar os recursos naturais.</dd>
+                </dl>
+
+                <pre><code>// Exemplo de automação de estufa sustentável
+if (umidadeSolo < 40) {
+    sistema.ligarIrrigacao();
+}</code></pre>
+
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <address>
+                Dúvidas: <a href="mailto:contato@agrinho.com">contato@agrinho.com</a>
+            </address>
+            <p>&copy; 2026 - Projeto <abbr title="Concurso Agrinho">#agrinho2026</abbr></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
 </html>

@@ -4,7 +4,7 @@ const campoNome = document.getElementById('nome');
 const textoMensagem = document.getElementById('mensagem');
 
 botao.addEventListener('click', function(evento) {
-    evento.preventDefault(); // Impede a página de subir quando clica no '#'
+    evento.preventDefault();
     
     const nome = campoNome.value.trim();
     
@@ -14,4 +14,4 @@ botao.addEventListener('click', function(evento) {
     } else {
         alert("Por favor, digite seu nome primeiro!");
     }
-};
+});

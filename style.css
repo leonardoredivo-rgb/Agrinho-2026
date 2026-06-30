@@ -18,3 +18,27 @@ button {
 .escondido {
     display: none !important;
 }
+
+.controle-zoom {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.controle-zoom button {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #858383;
+    background-color: #858383;
+    border-radius: 4px; /* Deixa levemente arredondado, remova se quiser 100% quadrado */
+}
+
+.controle-zoom button:hover {
+    background-color: #858383;
+}

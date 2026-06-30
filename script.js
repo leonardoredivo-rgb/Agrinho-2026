@@ -36,3 +36,27 @@ btnComecar.addEventListener('click', function() {
         alert("Primeiro digite seu nome e clique em 'Enviar'!");
     }
 });
+
+// Seleciona os botões e a área do texto da pergunta
+const btnAumentar = document.getElementById('btn-aumentar');
+const btnDiminuir = document.getElementById('btn-diminuir');
+const conteudoPergunta = document.getElementById('conteudo-pergunta');
+
+// Define o tamanho inicial da fonte
+let tamanhoFonte = 18;
+
+// Função para aumentar a letra
+btnAumentar.addEventListener('click', function() {
+    if (tamanhoFonte < 30) { // Limite máximo para não quebrar o layout
+        tamanhoFonte += 2;
+        conteudoPergunta.style.fontSize = tamanhoFonte + 'px';
+    }
+});
+
+// Função para diminuir a letra
+btnDiminuir.addEventListener('click', function() {
+    if (tamanhoFonte > 14) { // Limite mínimo para não ficar ilegível
+        tamanhoFonte -= 2;
+        conteudoPergunta.style.fontSize = tamanhoFonte + 'px';
+    }
+});

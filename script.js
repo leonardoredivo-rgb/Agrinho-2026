@@ -1,6 +1,11 @@
 
-const botao = document.getElementById('botao-enviar');
+const confirmar = document.getElementById('botao-enviar');
 const botao = document.getElementById('botao-comecar');
+botao.forEach(button =>{
+   button.addEventListener('click', function(){
+    const atual = document.querySelector('.ativo');
+   })
+})
 const campoNome = document.getElementById('nome');
 const textoMensagem = document.getElementById('mensagem');
 

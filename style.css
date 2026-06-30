@@ -36,7 +36,7 @@ button {
     justify-content: center;
     border: 1px solid #858383;
     background-color: #858383;
-    border-radius: 4px; /* Deixa levemente arredondado, remova se quiser 100% quadrado */
+    border-radius: 4px; /* Deixa levemente arredondado o botão do zoom */
 }
 
 .controle-zoom button:hover {

@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Agrinho 2026</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -28,13 +29,14 @@
 
     <div id="tela-pergunta" class="escondido">
         <div class="controle-zoom">
-        <button type="button" id="btn-aumentar">+</button>
-        <button type="button" id="btn-diminuir">-</button>
-    </div>
+            <button type="button" id="btn-aumentar">+</button>
+            <button type="button" id="btn-diminuir">-</button>
+        </div>
+        
         <h2>Questão 1</h2>
         <p>Olá, <strong id="nome-jogador"></strong>! Responda à pergunta abaixo:</p>
         
-        <div>
+        <div id="conteudo-pergunta">
             <h3>O que é fundamental para aumentar a eficiência e conservar recursos do agro?</h3>
             
             <p><button type="button">A) Magia</button></p>
@@ -44,6 +46,6 @@
         </div>
     </div>
 
-    <script src="script.js?v2"></script>
+    <script src="script.js"></script>
 </body>
 </html>

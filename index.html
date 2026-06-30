@@ -1,44 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viwerport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <title>Quiz Agrinho 2026</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div id="tela-home">
         <h1>Bem-vindo ao Quiz!</h1>
+        
         <form>
             <p>Digite seu nome abaixo:</p>
             <input type="text" id="nome" placeholder="Seu nome aqui...">
+            <button type="button" id="btn-enviar">Enviar</button>
         </form>
+
         <p id="mensagem">
             Olá! <br>
             Clique no botão ao lado para começar.
         </p>
+
         <p>
-            <button type="button" id="botao-enviar">Enviar</button>
-        </p>
-        <p>
-            <button type="button" id="botao-comecar">Começar o quiz</button>
+            <button type="button" id="btn-comecar">Começar o quiz</button>
         </p>
     </div>
+
     <div id="tela-pergunta" class="escondido">
         <h2>Questão 1</h2>
-        <p><strong id="nome-jogador"></strong> Responda à pergunta abaixo:</p>
+        <p>Olá, <strong id="nome-jogador"></strong>! Responda à pergunta abaixo:</p>
         
-        <div class="pergunta-box">
+        <div>
             <h3>O que é fundamental para aumentar a eficiência e conservar recursos do agro?</h3>
             
-            <p><button type="button" class="opcao">A) Magia</button></p>
-            <p><button type="button" class="opcao">B) Celular</button></p>
-            <p><button type="button" class="opcao">C) Futebol</button></p>
-            <p><button type="button" class="opcao">D) uso de tecnologias como agricultura de precisão e integração lavoura-pecuária-floresta</button></p>
+            <p><button type="button">A) Magia</button></p>
+            <p><button type="button">B) Celular</button></p>
+            <p><button type="button">C) Futebol</button></p>
+            <p><button type="button">D) uso de tecnologias como agricultura de precisão e integração lavoura-pecuária-floresta</button></p>
         </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

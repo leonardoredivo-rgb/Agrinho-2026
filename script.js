@@ -3,6 +3,10 @@ const botao = document.getElementById('botao-enviar');
 const campoNome = document.getElementById('nome');
 const textoMensagem = document.getElementById('mensagem');
 
+const telaHome = document.getElementById('tela-home');
+const telaPergunta = document.getElementById('tela-pergunta');
+const nomeJogador = document.getElementById('nome-jogador');
+
 botao.addEventListener('click', function(evento) {
     evento.preventDefault();
     

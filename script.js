@@ -1,22 +1,23 @@
-const botaoEnviar = document.getElementById('botao-enviar');
-const campoNome = document.getElementById('nome');
-const textoMensagem = document.getElementById('mensagem');
+// 1. Pegando os elementos certos do seu HTML atual
+const botaoEnviar = document.querySelector('button[type="button"]:nth-of-type(1)'); // Pega o primeiro botão ("Enviar")
+const campoNome = document.querySelector('input[type="text"]');
+const textoMensagem = document.querySelector('p:nth-of-type(2)'); // Onde está o "Olá!"
 
-const telaHome = document.getElementById('tela-home');
+const telaHome = document.querySelector('div'); // div principal
 const telaPergunta = document.getElementById('tela-pergunta');
 const nomeJogador = document.getElementById('nome-jogador');
 
-// Evento de clique para mudar de tela
+// 2. O evento de clique no botão Enviar
 botaoEnviar.addEventListener('click', function() {
     const nome = campoNome.value.trim();
     
     if (nome !== "") {
-        // 1. Passa o nome digitado para a tela da pergunta
-        nomeJogador.innerText = nome;
+        // Mostra o nome na pergunta
+        if (nomeJogador) nomeJogador.innerText = nome;
         
-        // 2. Esconde a tela inicial e mostra a tela da pergunta
-        telaHome.classList.add('escondido');
-        telaPergunta.classList.remove('escondido');
+        // Esconde a página inicial e mostra a pergunta
+        telaHome.style.display = 'none';
+        telaPergunta.style.display = 'block';
     } else {
         alert("Por favor, digite seu nome primeiro!");
     }

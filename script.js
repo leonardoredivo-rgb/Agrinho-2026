@@ -1,24 +1,38 @@
-// 1. Pegando os elementos certos do seu HTML atual
-const botaoEnviar = document.querySelector('button[type="button"]:nth-of-type(1)'); // Pega o primeiro botão ("Enviar")
-const campoNome = document.querySelector('input[type="text"]');
-const textoMensagem = document.querySelector('p:nth-of-type(2)'); // Onde está o "Olá!"
-
-const telaHome = document.querySelector('div'); // div principal
-const telaPergunta = document.getElementById('tela-pergunta');
+// Elementos da Página
+const campoNome = document.getElementById('nome');
+const textoMensagem = document.getElementById('mensagem');
 const nomeJogador = document.getElementById('nome-jogador');
+const telaHome = document.getElementById('tela-home');
+const telaPergunta = document.getElementById('tela-pergunta');
 
-// 2. O evento de clique no botão Enviar
-botaoEnviar.addEventListener('click', function() {
-    const nome = campoNome.value.trim();
+// Botões
+const btnEnviar = document.getElementById('btn-enviar');
+const btnComecar = document.getElementById('btn-comecar');
+
+// Variável para guardar o nome
+let nomeSalvo = "";
+
+//  registra o nome na tela inicial
+btnEnviar.addEventListener('click', function() {
+    nomeSalvo = campoNome.value.trim();
     
-    if (nome !== "") {
-        // Mostra o nome na pergunta
-        if (nomeJogador) nomeJogador.innerText = nome;
-        
-        // Esconde a página inicial e mostra a pergunta
-        telaHome.style.display = 'none';
-        telaPergunta.style.display = 'block';
+    if (nomeSalvo !== "") {
+        textoMensagem.innerHTML = `Olá, <strong>${nomeSalvo}</strong>!<br>Clique no botão abaixo para começar o quiz.`;
     } else {
-        alert("Por favor, digite seu nome primeiro!");
+        alert("Por favor, digite seu nome!");
+    }
+});
+
+// Muda para a página do Quiz
+btnComecar.addEventListener('click', function() {
+    if (nomeSalvo !== "") {
+        // Passa o nome para a próxima tela
+        nomeJogador.innerText = nomeSalvo;
+        
+        // Esconde uma tela e mostra a outra
+        telaHome.classList.add('escondido');
+        telaPergunta.classList.remove('escondido');
+    } else {
+        alert("Primeiro digite seu nome e clique em 'Enviar'!");
     }
 });
